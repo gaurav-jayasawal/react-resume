@@ -6,9 +6,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
-import com.esri.arcgisruntime.mapping.ArcGISMap;
-import com.esri.arcgisruntime.mapping.Basemap;
 import com.esri.arcgisruntime.mapping.view.MapView;
 import com.google.gson.Gson;
 
@@ -30,28 +31,82 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
     MapView mMapView;
-    ArrayList<String> idAl = new ArrayList<>(), titleAl = new ArrayList<>(), bodyAl = new ArrayList<>(), postLevel2 = new ArrayList<>(),name = new ArrayList<>(), description = new ArrayList<>(), coordinatesX = new ArrayList<>(), coordinatesY = new ArrayList<>();
+    ArrayList<String> idAl = new ArrayList<>(), date = new ArrayList<>(),titleAl = new ArrayList<>(), bodyAl = new ArrayList<>(), postLevel2 = new ArrayList<>(), name = new ArrayList<>(), description = new ArrayList<>(), coordinatesX = new ArrayList<>(), coordinatesY = new ArrayList<>();
     String postsResult;
     ArrayList<String> tagsTitleAl = new ArrayList<>();
+    int count = 0;
 
     public static String id[] = {"dsdf", "temp2", "temp3", "temp4", "temp5"};
     public static String title[] = {"dsdf", "temp2", "temp3", "temp4", "temp5"};
     public static String body[] = {"dsdf", "temp2", "temp3", "temp4", "temp5"};
 
-
+    Button next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mMapView = (MapView) findViewById(R.id.mapView);
-        ArcGISMap map = new ArcGISMap(Basemap.Type.NAVIGATION_VECTOR, 34.056295, -117.195800, 16);
-        mMapView.setMap(map);
+//        mMapView = (MapView) findViewById(R.id.mapView);
+//        ArcGISMap map = new ArcGISMap(Basemap.Type.NAVIGATION_VECTOR, 34.056295, -117.195800, 16);
+//        mMapView.setMap(map);
+
         new GetFuckingData().execute();
+
+        final TextView nameText = (TextView) findViewById(R.id.name);
+        final TextView descText = (TextView) findViewById(R.id.name);
+        final TextView xText = (TextView) findViewById(R.id.name);
+        final TextView yText = (TextView) findViewById(R.id.name);
+
+        next = (Button) findViewById(R.id.nextValue);
+        next.setClickable(false);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("name",name.get(count));
+                Log.d("desc",description.get(count));
+                Log.d("x",coordinatesX.get(count));
+                Log.d("y",coordinatesY.get(count));
+
+                nameText.setText(name.get(count));
+                descText.setText(description.get(count));
+                xText.setText(coordinatesX.get(count));
+                yText.setText(coordinatesY.get(count));
+                count++;
+
+                for(int i=0;i<description.size();i++) {
+                    Pattern pattern = Pattern.compile("(\\d{4})");
+                    Matcher matcher = pattern.matcher(description.get(i));
+                    String val = "";
+                    if (matcher.find()) {
+                        System.out.println(matcher.group(1));
+                        date.add(matcher.group(1));
+                    }
+                    else{
+                        date.add("1950");
+                    }
+                }
+
+                for(int i=0;i<date.size();i++){
+                    Log.d("valueOf","date"+date.get(i));
+                }
+
+                Log.d("length of",Collections.min(date));
+                Log.d("length of",Collections.max(date));
+
+
+            }
+
+
+        });
+
+
 
     }
 
@@ -127,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            Log.d("see","whatsin"+postsResult);
+            Log.d("see", "whatsin" + postsResult);
 
             JSONArray jsonarray = null;
             try {
@@ -148,9 +203,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-            Log.d("tags", String.valueOf(titleAl.size())+ titleAl.get(0));
+            Log.d("tags", String.valueOf(titleAl.size()) + titleAl.get(0));
 
-            for(int i=0;i<titleAl.size();i++) {
+            for (int i = 0; i < titleAl.size(); i++) {
                 try {
                     JSONObject parentObject = new JSONObject(titleAl.get(i));
                     postLevel2.add(parentObject.getString("attributes"));
@@ -163,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
 
             Log.d("lengthPostLevel2", String.valueOf(postLevel2.size()));
 
-            for(int i=0; i<postLevel2.size();i++) {
+            for (int i = 0; i < postLevel2.size(); i++) {
                 try {
                     JSONObject parentObject = new JSONObject(postLevel2.get(i));
                     name.add(parentObject.getString("name"));
@@ -174,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            for(int i=0; i<postLevel2.size();i++) {
+            for (int i = 0; i < postLevel2.size(); i++) {
                 try {
                     JSONObject parentObject = new JSONObject(postLevel2.get(i));
                     description.add(parentObject.getString("description"));
@@ -185,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            for(int i=0; i<postLevel2.size();i++) {
+            for (int i = 0; i < postLevel2.size(); i++) {
                 try {
                     JSONObject parentObject = new JSONObject(postLevel2.get(i));
                     coordinatesX.add(parentObject.getString("coordinates_X"));
@@ -195,10 +250,6 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-
-
-
-
 
 
 //            try {
@@ -213,19 +264,25 @@ public class MainActivity extends AppCompatActivity {
 
             return "";
         }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            next.setClickable(true);
+        }
     }
 
 
     @Override
     protected void onPause() {
-        mMapView.pause();
+//        mMapView.pause();
         super.onPause();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mMapView.resume();
+//        mMapView.resume();
     }
 
 }
