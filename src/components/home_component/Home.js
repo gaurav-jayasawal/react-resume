@@ -2,18 +2,38 @@ import React, { Component } from "react";
 import "./Home.css";
 import personImage from "../../main_assets/first_page_image.svg";
 import logoImage from "../../main_assets/name_logo.svg";
+import SocialButton from "../general_components/social_buttons/SocialButton";
 
 class Home extends Component {
   render() {
     return (
       <div className="home">
-        <img id="logo-image" src={logoImage} width="250" alt="" />
-        <img src={personImage} width="800" alt="" />
-        <div className="nav-bars">
-          <a href="/">
-            <div className="nav-bars_1" />
-            <div className="nav-bars_2" />
-          </a>
+        <div className="home-flex1">
+          <img src={logoImage} width="200" alt="" />
+        </div>
+        <div className="home-flex2">
+          <div className="home-flex2_intro">
+            <h1>HELLO! I'M GAURAV</h1>
+            <h3>A MOBILE AND WEB DEVELOPER</h3>
+          </div>
+          <img id="home-flex2_person" src={personImage} alt="" />
+        </div>
+        <div className="home-flex3">
+          <div>
+            <a href="">
+              <div className="nav-bars">
+                <div id="nav-bars_1" />
+                <div id="nav-bars_2" />
+              </div>
+            </a>
+          </div>
+          <div className="home-flex3_social">
+            <SocialButton href="test" class="far fa-envelope" />
+            <SocialButton href="test" class="fab fa-linkedin-in" />
+            <SocialButton href="test" class="fab fa-instagram" />
+            <SocialButton href="test" class="fab fa-github" />
+          </div>
+          <div className="home-flex3_spacer" />
         </div>
       </div>
     );
