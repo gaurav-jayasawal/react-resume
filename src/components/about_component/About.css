@@ -1,7 +1,7 @@
 .about {
   height: 100vh;
   box-sizing: border-box;
-  padding: 50px 200px;
+  padding: 50px 250px;
 }
 
 .about-title {
@@ -14,10 +14,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.about-contents_col1 {
+  display: grid;
+  /* justify-content: center; */
+}
+.about-contents_col2 {
+  padding-top: 20px;
+}
 
 .about-contents_col1--description {
   text-align: center;
-  width: 500px;
+  width: 450px;
+  letter-spacing: 1px;
   line-height: 25px;
   font-size: 14px;
 }

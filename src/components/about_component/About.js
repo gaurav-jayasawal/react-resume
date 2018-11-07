@@ -1,8 +1,23 @@
 import React, { Component } from "react";
 import "./About.css";
 import MyImage from "../../main_assets/MyImage.svg";
+import RatingBar from "./RatingBar/RatingBar";
 
 class About extends Component {
+  skills = [
+    { skill: "react", rating: "90" },
+    { skill: "android", rating: "95" },
+    { skill: "js", rating: "85" },
+    { skill: "node", rating: "80" },
+    { skill: "sql", rating: "90" },
+    { skill: "php", rating: "80" },
+    { skill: "firebase", rating: "80" },
+    { skill: "nosql", rating: "85" },
+    { skill: "leadership", rating: "95" },
+    { skill: "agile", rating: "85" },
+    { skill: "prototype", rating: "85" }
+  ];
+
   render() {
     return (
       <div className="about">
@@ -12,7 +27,7 @@ class About extends Component {
         <div className="about-contents">
           <div className="about-contents_col1">
             <div className="about-contents_col1--image">
-              <img src={MyImage} width="500px" alt="" />
+              <img src={MyImage} width="450px" alt="" />
             </div>
             <div className="about-contents_col1--description">
               <h3>
@@ -24,7 +39,13 @@ class About extends Component {
             </div>
             <div className="about-contents-col1--button">B</div>
           </div>
-          <div className="about-contents_col2">A</div>
+          <div className="about-contents_col2">
+            <div className="about-contents_col2--ratingBars">
+              {this.skills.map(skillset => (
+                <RatingBar skill={skillset.skill} rating={skillset.rating} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     );

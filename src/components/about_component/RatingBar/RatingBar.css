@@ -1,0 +1,27 @@
+.ratingBar {
+  display: grid;
+  grid-template-columns: 120px auto 1fr;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+.ratingBar-skillName {
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background: #1f5673;
+}
+
+.ratingBar-bar {
+  background: var(--darker-blue);
+  /* width: 500px; CHANGE THIS TO CHANGE THE VALUE OF LIFE */
+}
+
+.ratingBar-bar_value {
+  text-align: center;
+  padding: 10px 15px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
