@@ -1,0 +1,33 @@
+.home {
+  background-image: url("../../main_assets/bg1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+#logo-image {
+  position: absolute;
+  top: 80px;
+  left: 100px;
+}
+
+.nav-bars {
+  position: absolute;
+  top: 0;
+  padding: 120px 150px 0px 0px;
+  right: 0;
+}
+
+.nav-bars_1,
+.nav-bars_2 {
+  width: 35px;
+  height: 4px;
+  background-color: var(--light-blue);
+  margin: 10px 0;
+}
