@@ -74,7 +74,20 @@
   left: calc(50% - 3px);
 }
 
-/* 
-nav-bars > * {
-  border: 5px solid white;
-} */
+@media (max-width: 1650px) {
+  .home {
+    padding: 100px 100px 50px 100px;
+  }
+}
+
+@media (max-width: 1550px) {
+  .home-flex2_intro > h1 {
+    font-size: 46px;
+  }
+  .home-flex2_intro > h3 {
+    font-size: 24px;
+  }
+  #home-flex2_person {
+    width: 700px;
+  }
+}

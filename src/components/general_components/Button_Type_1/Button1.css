@@ -1,7 +1,8 @@
 .button1 {
   background: #5b5a5a;
   width: 150px;
-  display: inline-block;
+  display: grid;
+  align-content: center;
   word-break: break-all;
 }
 
@@ -9,9 +10,16 @@
   color: white;
   display: grid;
   align-content: center;
+  padding: 10px 0px;
   justify-content: center;
   grid-template-columns: auto auto;
   grid-column-gap: 20px;
+}
+
+.about-contents-col1--button {
+  width: 450px;
+  display: grid;
+  justify-content: center;
 }
 
 .button1-arrow > i {
