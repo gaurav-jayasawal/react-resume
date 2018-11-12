@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./About.css";
 import MyImage from "../../main_assets/MyImage.svg";
 import RatingBar from "./RatingBar/RatingBar";
+import Button1 from "../general_components/Button_Type_1/Button1";
 
 class About extends Component {
   skills = [
@@ -11,7 +12,7 @@ class About extends Component {
     { skill: "node", rating: "80" },
     { skill: "sql", rating: "90" },
     { skill: "php", rating: "80" },
-    { skill: "firebase", rating: "80" },
+    { skill: "firebase", rating: "85" },
     { skill: "nosql", rating: "85" },
     { skill: "leadership", rating: "95" },
     { skill: "agile", rating: "85" },
@@ -37,7 +38,9 @@ class About extends Component {
                 administration.
               </h3>
             </div>
-            <div className="about-contents-col1--button">B</div>
+            <div className="about-contents-col1--button">
+              <Button1 />
+            </div>
           </div>
           <div className="about-contents_col2">
             <div className="about-contents_col2--ratingBars">

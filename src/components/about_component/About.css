@@ -29,3 +29,8 @@
   line-height: 25px;
   font-size: 14px;
 }
+
+.about-contents-col1--button {
+  display: grid;
+  /* justify-content: ; */
+}

@@ -28,10 +28,22 @@ class Home extends Component {
             </a>
           </div>
           <div className="home-flex3_social">
-            <SocialButton href="test" class="far fa-envelope" />
-            <SocialButton href="test" class="fab fa-linkedin-in" />
-            <SocialButton href="test" class="fab fa-instagram" />
-            <SocialButton href="test" class="fab fa-github" />
+            <SocialButton
+              href="@mailto:jgaurav6@gmail.com"
+              class="far fa-envelope"
+            />
+            <SocialButton
+              href="https://www.linkedin.com/in/gauravjj/"
+              class="fab fa-linkedin-in"
+            />
+            <SocialButton
+              href="https://www.instagram.com/gauravjj/"
+              class="fab fa-instagram"
+            />
+            <SocialButton
+              href="https://github.com/jgaurav6"
+              class="fab fa-github"
+            />
           </div>
           <div className="home-flex3_spacer" />
         </div>
