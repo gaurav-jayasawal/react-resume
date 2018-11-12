@@ -46,11 +46,9 @@ class ratingBar extends Component {
         break;
       case window.innerWidth <= 700 && window.innerWidth > 650:
         num = 220;
-
         break;
       case window.innerWidth <= 650 && window.innerWidth > 600:
         num = 240;
-
         break;
       case window.innerWidth <= 600 && window.innerWidth > 500:
         num = 260;
@@ -60,7 +58,6 @@ class ratingBar extends Component {
         break;
       default:
         num = 0;
-
         break;
     }
 
