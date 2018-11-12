@@ -16,12 +16,12 @@
   grid-column-gap: 20px;
 }
 
-.about-contents-col1--button {
-  width: 450px;
-  display: grid;
-  justify-content: center;
-}
-
 .button1-arrow > i {
   font-size: 16px;
+}
+
+@media (max-width: 1300px) {
+  .button1-innerdiv {
+    padding: 0px;
+  }
 }

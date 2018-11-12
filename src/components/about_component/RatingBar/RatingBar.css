@@ -30,7 +30,49 @@
   .ratingBar-skillName {
     font-size: 14px;
   }
+
+  .ratingBar-bar_value {
+    font-size: 14px;
+  }
   .ratingBar {
     grid-template-columns: 100px auto 1fr;
+  }
+}
+
+@media (max-width: 1450px) {
+  .ratingBar-skillName {
+    vertical-align: middle;
+  }
+  .ratingBar-skillName {
+    font-size: 12px;
+  }
+
+  .ratingBar-bar_value {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .about {
+    padding: 50px 100px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .about-contents_col1--description > h3 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  .ratingBar-skillName {
+    font-size: 10px;
+  }
+
+  .ratingBar-bar_value {
+    font-size: 10px;
+  }
+  .ratingBar {
+    grid-template-columns: 70px auto 1fr;
   }
 }

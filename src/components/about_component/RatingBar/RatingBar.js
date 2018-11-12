@@ -18,17 +18,56 @@ class ratingBar extends Component {
   }
 
   updateWindowDimensions() {
-    if (window.innerWidth > 1500) {
-      this.setState({
-        width: window.innerWidth / 300,
-        height: window.innerHeight / 300
-      });
-    } else {
-      this.setState({
-        width: window.innerWidth / 305,
-        height: window.innerHeight / 305
-      });
+    let num = 0;
+    switch (true) {
+      case window.innerWidth > 1500:
+        num = 300;
+        break;
+      case window.innerWidth <= 1500 && window.innerWidth > 1300:
+        num = 305;
+        break;
+      case window.innerWidth <= 1300 && window.innerWidth > 1240:
+        num = 320;
+        break;
+      case window.innerWidth <= 1240 && window.innerWidth > 1200:
+        num = 345;
+        break;
+      case window.innerWidth <= 1200 && window.innerWidth > 1150:
+        num = 400;
+        break;
+      case window.innerWidth <= 1150 && window.innerWidth > 1000:
+        num = 160;
+        break;
+      case window.innerWidth <= 1000 && window.innerWidth > 800:
+        num = 180;
+        break;
+      case window.innerWidth <= 800 && window.innerWidth > 700:
+        num = 200;
+        break;
+      case window.innerWidth <= 700 && window.innerWidth > 650:
+        num = 220;
+
+        break;
+      case window.innerWidth <= 650 && window.innerWidth > 600:
+        num = 240;
+
+        break;
+      case window.innerWidth <= 600 && window.innerWidth > 500:
+        num = 260;
+        break;
+      case window.innerWidth <= 500:
+        num = 0;
+        break;
+      default:
+        num = 0;
+
+        break;
     }
+
+    this.setState({
+      width: window.innerWidth / num,
+      height: window.innerHeight / num
+    });
   }
 
   render() {
