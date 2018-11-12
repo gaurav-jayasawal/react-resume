@@ -25,3 +25,12 @@
   border-right: 1px solid black;
   border-bottom: 1px solid black;
 }
+
+@media (max-width: 1500px) {
+  .ratingBar-skillName {
+    font-size: 14px;
+  }
+  .ratingBar {
+    grid-template-columns: 100px auto 1fr;
+  }
+}

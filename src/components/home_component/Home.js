@@ -20,7 +20,7 @@ class Home extends Component {
         </div>
         <div className="home-flex3">
           <div className="navbar-burger">
-            <a href="">
+            <a href="/">
               <div className="nav-bars">
                 <div id="nav-bars_1" />
                 <div id="nav-bars_2" />

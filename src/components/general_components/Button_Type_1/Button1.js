@@ -7,7 +7,7 @@ const button1 = props => (
       <div className="button1-innerdiv">
         <div>RESUME</div>
         <div className="button1-arrow">
-          <i class="fas fa-arrow-right" />
+          <i className="fas fa-arrow-right" />
         </div>
       </div>
     </a>

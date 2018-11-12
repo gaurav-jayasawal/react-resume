@@ -45,7 +45,11 @@ class About extends Component {
           <div className="about-contents_col2">
             <div className="about-contents_col2--ratingBars">
               {this.skills.map(skillset => (
-                <RatingBar skill={skillset.skill} rating={skillset.rating} />
+                <RatingBar
+                  key={skillset.skill}
+                  skill={skillset.skill}
+                  rating={skillset.rating}
+                />
               ))}
             </div>
           </div>
