@@ -91,3 +91,52 @@
     width: 700px;
   }
 }
+
+@media (max-width: 1450px) {
+  .home-flex1 > img {
+    width: 180px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .home {
+    padding: 100px 80px 50px 80px;
+  }
+}
+
+@media (max-width: 1250px) {
+  #home-flex2_person {
+    width: 600px;
+  }
+  .home-flex2 {
+    margin-top: 20vh;
+  }
+  .home-flex3 {
+    grid-template-rows: 2.3fr 2fr 0fr;
+  }
+  .nav-bars > * {
+    width: 30px;
+    height: 3px;
+  }
+  .home-flex2_intro > h1 {
+    font-size: 40px;
+  }
+  .home-flex2_intro > h3 {
+    font-size: 20px;
+  }
+  .home-flex1 > img {
+    width: 160px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home {
+    display: block;
+  }
+  .home-flex2 {
+    margin-top: 5vh;
+  }
+  .home-flex3 {
+    display: block;
+  }
+}

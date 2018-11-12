@@ -19,7 +19,7 @@ class Home extends Component {
           <img id="home-flex2_person" src={personImage} alt="" />
         </div>
         <div className="home-flex3">
-          <div>
+          <div className="navbar-burger">
             <a href="">
               <div className="nav-bars">
                 <div id="nav-bars_1" />
