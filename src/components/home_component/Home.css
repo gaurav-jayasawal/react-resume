@@ -247,3 +247,14 @@
     width: 220px;
   }
 }
+@media (max-width: 350px) {
+  .home-flex1 > img {
+    width: 80px;
+  }
+  .nav-bars > * {
+    width: 19px;
+  }
+  #home-flex2_person {
+    width: 200px;
+  }
+}
