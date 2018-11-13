@@ -14,8 +14,8 @@ class About extends Component {
     { skill: "php", rating: "80" },
     { skill: "firebase", rating: "85" },
     { skill: "nosql", rating: "85" },
-    { skill: "leadership", rating: "95" },
-    { skill: "agile", rating: "85" },
+    { skill: "css", rating: "85" },
+    { skill: "agile", rating: "90" },
     { skill: "prototype", rating: "85" }
   ];
 

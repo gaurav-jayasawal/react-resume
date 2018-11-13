@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Project.css";
+import ProjectContainer from "./ProjectContainer/ProjectContainer";
 
 class Project extends Component {
   projectButtons = [
@@ -32,6 +33,12 @@ class Project extends Component {
               </span>
             </a>
           ))}
+        </div>
+        <p className="project-help">
+          Showing all projects. Click on buttons to filter.
+        </p>
+        <div className="projects-container_projects">
+          <ProjectContainer />
         </div>
       </div>
     );

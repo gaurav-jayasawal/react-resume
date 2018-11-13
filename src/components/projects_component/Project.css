@@ -1,6 +1,6 @@
 .project {
   background: #f3f3f3;
-  height: 100vh;
+  min-height: 100vh;
   padding: 50px 250px;
   box-sizing: border-box;
 }
@@ -24,4 +24,9 @@
 .project-buttons_btn:hover {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.25);
+}
+
+.project-help {
+  margin-top: 50px;
+  
 }
