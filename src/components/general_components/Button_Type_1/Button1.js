@@ -3,7 +3,7 @@ import "./Button1.css";
 
 const button1 = props => (
   <div className="button1">
-    <a href="/">
+    <a href={require("../../../main_assets/softdev.pdf")} target="_blank">
       <div className="button1-innerdiv">
         <div>RESUME</div>
         <div className="button1-arrow">
