@@ -3,6 +3,7 @@ import "./About.css";
 import MyImage from "../../main_assets/MyImage.svg";
 import RatingBar from "./RatingBar/RatingBar";
 import Button1 from "../general_components/Button_Type_1/Button1";
+// import ScrollableAnchor from "react-scrollable-anchor";
 
 class About extends Component {
   skills = [
@@ -21,7 +22,8 @@ class About extends Component {
 
   render() {
     return (
-      <div className="about" id="about">
+      // <ScrollableAnchor id="about">
+      <div className="about">
         <div className="about-title">
           <h1>a little about me</h1>
         </div>
@@ -55,6 +57,7 @@ class About extends Component {
           </div>
         </div>
       </div>
+      // </ScrollableAnchor>
     );
   }
 }
