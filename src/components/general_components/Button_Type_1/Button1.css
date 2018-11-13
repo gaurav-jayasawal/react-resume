@@ -4,6 +4,13 @@
   display: grid;
   align-content: center;
   word-break: break-all;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.25);
+}
+
+.button1:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.25);
 }
 
 .button1-innerdiv {
