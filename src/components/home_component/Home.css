@@ -23,12 +23,31 @@
   box-sizing: border-box;
 }
 
+.home-overlay_bar--container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding-top: 50px;
+}
+
 .nav-bars {
   display: grid;
   justify-content: center;
 }
 
+.nav-bars:hover > #nav-bars_1 {
+  transform: rotate(90deg) translate(10px, 0px);
+  transition: transform 0.6s;
+}
+
+.nav-bars:hover > #nav-bars_2 {
+  transform: rotate(180deg) translate(0, 5px);
+  transition: transform 0.6s;
+}
+
 .nav-bars > * {
+  transform: rotate(0deg) translate(0, 0px);
+  transition: transform 0.6s;
   width: 35px;
   height: 4px;
   background-color: var(--light-blue);
