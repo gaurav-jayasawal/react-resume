@@ -52,18 +52,6 @@
   }
 }
 
-@media (max-width: 1400px) {
-  .about {
-    padding: 50px 100px;
-  }
-}
-
-@media (max-width: 1300px) {
-  .about-contents_col1--description > h3 {
-    font-size: 14px;
-  }
-}
-
 @media (max-width: 650px) {
   .ratingBar-skillName {
     font-size: 10px;
@@ -74,5 +62,23 @@
   }
   .ratingBar {
     grid-template-columns: 70px auto 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .ratingBar {
+    grid-template-columns: 100px auto 200px;
+  }
+}
+
+@media (max-width: 450px) {
+  .ratingBar {
+    grid-template-columns: 80px auto 150px;
+  }
+}
+
+@media (max-width: 350px) {
+  .ratingBar {
+    grid-template-columns: 80px auto 120px;
   }
 }
