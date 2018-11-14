@@ -78,10 +78,10 @@ class Home extends Component {
               <a href="#about">
                 <h1>ABOUT ME</h1>
               </a>
-              <a href="">
+              <a href="#resume">
                 <h1>RESUME</h1>
               </a>
-              <a href="">
+              <a href="#projects">
                 <h1>PROJECTS</h1>
               </a>
             </div>
@@ -97,7 +97,7 @@ class Home extends Component {
         </div>
         <div className="home-flex3">
           <div className="navbar-burger" style={this.state.burgerStyle}>
-            <a href="" onClick={this.testHere}>
+            <a href="/" onClick={this.testHere}>
               <div className="nav-bars">
                 <div id="nav-bars_1" />
                 <div id="nav-bars_2" />

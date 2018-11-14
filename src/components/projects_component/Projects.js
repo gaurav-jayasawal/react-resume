@@ -27,10 +27,8 @@ class Project extends Component {
         </div>
         <div className="project-buttons">
           {this.projectButtons.map(technology => (
-            <a href="">
-              <span key={technology.name} className="project-buttons_btn">
-                {technology.name}
-              </span>
+            <a key={technology.name} href="/">
+              <span className="project-buttons_btn">{technology.name}</span>
             </a>
           ))}
         </div>
