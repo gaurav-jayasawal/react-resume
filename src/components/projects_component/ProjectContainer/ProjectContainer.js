@@ -29,7 +29,7 @@ class ProjectContainer extends Component {
           title: "eGlu Main Website",
           fontColor: "#F4EBD9",
           color: "rgb(0,159,183,0.85)",
-          technologies: ["React", "CSS", "HTML5"]
+          technologies: ["JS", "CSS", "HTML5", "Express JS"]
         },
         {
           id: "4",
@@ -37,7 +37,7 @@ class ProjectContainer extends Component {
           title: "eGlu App Website",
           fontColor: "#F93943",
           color: "rgb(232,232,232,0.85)",
-          technologies: ["React", "CSS", "HTML5"]
+          technologies: ["Express JS", "CSS", "HTML5", "JS"]
         },
         {
           id: "5",
@@ -77,7 +77,7 @@ class ProjectContainer extends Component {
                   ))}
                 </div>
               </div>
-              <a href="">
+              <a>
                 <img src={image.source} alt="" />
               </a>
             </div>

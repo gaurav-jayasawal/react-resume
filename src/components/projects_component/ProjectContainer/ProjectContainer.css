@@ -36,7 +36,8 @@
   align-content: center;
 }
 
-.ProjectContainer_Project_Image:hover > .projectContainer-overlay {
+.ProjectContainer_Project_Image:hover > .projectContainer-overlay,
+.info-slide:active > .projectContainer-overlay {
   height: 100%;
   width: 100%;
   margin: 0 auto;
