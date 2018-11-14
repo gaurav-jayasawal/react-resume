@@ -71,7 +71,10 @@ class ProjectContainer extends Component {
                 <h3>{image.title}</h3>
                 <div className="projectContainer-overlay_technologies">
                   {image.technologies.map(tech => (
-                    <span className="projectContainer-overlay_technologies--box">
+                    <span
+                      key={tech}
+                      className="projectContainer-overlay_technologies--box"
+                    >
                       {tech}
                     </span>
                   ))}

@@ -24,10 +24,21 @@
 }
 
 .home-overlay_bar--container {
+  height: 100vh;
   display: grid;
   justify-content: center;
   align-content: center;
-  padding-top: 50px;
+}
+
+.home-overlay_bar--container > a > h1 {
+  padding: 30px 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.home-overlay_bar--container > a > h1:hover {
+  text-decoration: none;
+  color: var(--darker-blue);
 }
 
 .nav-bars {
@@ -287,4 +298,14 @@
   #home-flex2_person {
     width: 200px;
   }
+}
+
+.home-overlay_bar {
+  position: relative;
+  z-index: 200;
+}
+
+.home-overlay_bar--container {
+  position: relative;
+  z-index: 100;
 }

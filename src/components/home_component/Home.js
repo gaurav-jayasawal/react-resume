@@ -3,6 +3,7 @@ import "./Home.css";
 import personImage from "../../main_assets/first_page_image.svg";
 import logoImage from "../../main_assets/name_logo.svg";
 import SocialButton from "../general_components/social_buttons/SocialButton";
+import { goToAnchor } from "react-scrollable-anchor";
 
 class Home extends Component {
   constructor(props) {
@@ -65,23 +66,82 @@ class Home extends Component {
     });
   };
 
+  handleClick(param, e) {
+    e.preventDefault();
+    console.log(param);
+    goToAnchor(param);
+    this.setState({
+      overlay_style: {
+        height: "100vh",
+        width: "100%",
+        background: "rgb(126,126,126,0.94)",
+        top: "0",
+        left: "0",
+        transform: "translate(0,-100%)",
+        transition: "transform 0.6s",
+        position: "absolute",
+        display: "block"
+      },
+      burgerStyle: {
+        visibility: "visible",
+        transition: "visibility 0.7s"
+      }
+    });
+  }
+
+  handleClickOut = e => {
+    e.preventDefault();
+    console.log(e.target.className);
+    if (e.target.className == "home-overlay_bar--container") {
+      this.setState({
+        overlay_style: {
+          height: "100vh",
+          width: "100%",
+          background: "rgb(126,126,126,0.94)",
+          top: "0",
+          left: "0",
+          transform: "translate(0,-100%)",
+          transition: "transform 0.6s",
+          position: "absolute",
+          display: "block"
+        },
+        burgerStyle: {
+          visibility: "visible",
+          transition: "visibility 0.7s"
+        }
+      });
+    }
+  };
+
+  componentDidMount() {
+    document.addEventListener("mousedown", this.handleClickOut);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleClickOut);
+  }
+
   render() {
     return (
       <div className="home">
         <div className="home-flex1">
           <div
             className="home-overlay_bar"
+            id="overlay"
+            // onClick="location.href = '#home'"
             style={this.state.overlay_style}
-            onClick={this.clickOnOverlay}
           >
             <div className="home-overlay_bar--container">
-              <a href="#about">
+              <a href="" onClick={this.handleClick.bind(this, "home")}>
+                <h1>HOME</h1>
+              </a>
+              <a href="" onClick={this.handleClick.bind(this, "about")}>
                 <h1>ABOUT ME</h1>
               </a>
-              <a href="#resume">
+              <a href="" onClick={this.handleClick.bind(this, "about")}>
                 <h1>RESUME</h1>
               </a>
-              <a href="#projects">
+              <a href="" onClick={this.handleClick.bind(this, "projects")}>
                 <h1>PROJECTS</h1>
               </a>
             </div>
@@ -106,7 +166,7 @@ class Home extends Component {
           </div>
           <div className="home-flex3_social">
             <SocialButton
-              href="@mailto:jgaurav6@gmail.com"
+              href="mailto:jgaurav6@gmail.com"
               class="far fa-envelope"
             />
             <SocialButton
