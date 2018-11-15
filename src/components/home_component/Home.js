@@ -91,8 +91,7 @@ class Home extends Component {
 
   handleClickOut = e => {
     e.preventDefault();
-    console.log(e.target.className);
-    if (e.target.className == "home-overlay_bar--container") {
+    if (e.target.className === "home-overlay_bar--container") {
       this.setState({
         overlay_style: {
           height: "100vh",
@@ -132,16 +131,16 @@ class Home extends Component {
             style={this.state.overlay_style}
           >
             <div className="home-overlay_bar--container">
-              <a href="" onClick={this.handleClick.bind(this, "home")}>
+              <a href="/" onClick={this.handleClick.bind(this, "home")}>
                 <h1>HOME</h1>
               </a>
-              <a href="" onClick={this.handleClick.bind(this, "about")}>
+              <a href="/" onClick={this.handleClick.bind(this, "about")}>
                 <h1>ABOUT ME</h1>
               </a>
-              <a href="" onClick={this.handleClick.bind(this, "about")}>
+              <a href="/" onClick={this.handleClick.bind(this, "about")}>
                 <h1>RESUME</h1>
               </a>
-              <a href="" onClick={this.handleClick.bind(this, "projects")}>
+              <a href="/" onClick={this.handleClick.bind(this, "projects")}>
                 <h1>PROJECTS</h1>
               </a>
             </div>
