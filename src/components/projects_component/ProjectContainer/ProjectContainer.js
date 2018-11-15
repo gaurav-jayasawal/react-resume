@@ -96,7 +96,7 @@ class ProjectContainer extends Component {
                   ))}
                 </div>
               </div>
-              <a href="/">
+              <a>
                 <img src={image.source} alt="" />
               </a>
             </div>

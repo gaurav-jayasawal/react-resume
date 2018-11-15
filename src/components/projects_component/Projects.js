@@ -46,7 +46,13 @@ class Project extends Component {
           title: "Ananda Timer",
           fontColor: "#F1FAEE",
           color: "rgb(203,69,27,0.85)",
-          technologies: ["Flutter", "Adobe XD", "Cross platform"]
+          technologies: [
+            "Flutter",
+            "Adobe XD",
+            "Cross platform",
+            "Android",
+            "iOS"
+          ]
         },
         {
           id: "eland",
@@ -77,7 +83,8 @@ class Project extends Component {
         { name: "PHP", id: "php" },
         { name: "SQL", id: "sql" },
         { name: "NO SQL", id: "nosql" },
-        { name: "Flutter", id: "flutter" }
+        { name: "FLUTTER", id: "flutter" },
+        { name: "IOS", id: "ios" }
       ],
       projectTechnologies: [
         {
