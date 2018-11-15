@@ -1,6 +1,7 @@
 .ProjectContainer_Project {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
   justify-content: center;
 }
 
@@ -10,7 +11,8 @@
 }
 
 .ProjectContainer_Project_Image {
-  border: 1px solid lightblue;
+  border-radius: 15px;
+  /* border: 1px solid lightgray; */
   overflow: hidden;
   position: relative;
 }

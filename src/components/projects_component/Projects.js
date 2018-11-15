@@ -46,13 +46,7 @@ class Project extends Component {
           title: "Ananda Timer",
           fontColor: "#F1FAEE",
           color: "rgb(203,69,27,0.85)",
-          technologies: [
-            "Flutter",
-            "Adobe XD",
-            "Cross platform",
-            "Android",
-            "iOS"
-          ]
+          technologies: ["Flutter", "Adobe XD", "Android", "iOS"]
         },
         {
           id: "eland",
@@ -68,7 +62,15 @@ class Project extends Component {
           title: "Deliver It",
           fontColor: "#EDF7F6",
           color: "rgb(0,139,139,0.85)",
-          technologies: ["Android", "Java", "Proto.io"]
+          technologies: ["Android", "Java", "Proto.io", "PHP", "SQL"]
+        },
+        {
+          id: "elweb",
+          source: require("../../main_assets/screens/screenshot8.png"),
+          title: "eGlu Logger",
+          fontColor: "#413C58",
+          color: "rgb(248,248,248,0.85)",
+          technologies: ["Node", "JS", "HTML5"]
         }
       ],
       projectButtons: [
@@ -83,13 +85,22 @@ class Project extends Component {
         { name: "PHP", id: "php" },
         { name: "SQL", id: "sql" },
         { name: "NO SQL", id: "nosql" },
-        { name: "FLUTTER", id: "flutter" },
-        { name: "IOS", id: "ios" }
+        { name: "FLUTTER", id: "flutter" }
+        // { name: "IOS", id: "ios" }
       ],
       projectTechnologies: [
         {
           id: "showall",
-          value: ["shweb", "chweb", "emweb", "eaweb", "anand", "eland", "diand"]
+          value: [
+            "shweb",
+            "chweb",
+            "emweb",
+            "eaweb",
+            "anand",
+            "eland",
+            "diand",
+            "elweb"
+          ]
         },
         {
           id: "android",
@@ -97,7 +108,7 @@ class Project extends Component {
         },
         {
           id: "html5",
-          value: ["shweb", "chweb", "emweb", "eaweb"]
+          value: ["shweb", "chweb", "emweb", "eaweb", "elweb"]
         },
         {
           id: "react",
@@ -109,11 +120,31 @@ class Project extends Component {
         },
         {
           id: "nodejs",
+          value: ["emweb", "eaweb", "elweb"]
+        },
+        {
+          id: "java",
+          value: ["diand"]
+        },
+        {
+          id: "expressjs",
           value: ["emweb", "eaweb"]
         },
         {
-          id: "diand",
+          id: "php",
           value: ["diand"]
+        },
+        {
+          id: "sql",
+          value: ["diand"]
+        },
+        {
+          id: "nosql",
+          value: ["chweb", "shweb"]
+        },
+        {
+          id: "flutter",
+          value: ["anand"]
         }
       ],
       finalSend: [],
@@ -144,9 +175,7 @@ class Project extends Component {
         projectTechnologies: [...this.state.projectTechnologies],
         finalSend: [...newArr],
         clicked: [
-          s === "showall"
-            ? "All projects. Use buttons to filter."
-            : title[0].name + " PROJECTS"
+          s === "showall" ? "All projects." : title[0].name + " PROJECTS"
         ]
       };
       this.setState(newState);
