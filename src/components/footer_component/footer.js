@@ -9,10 +9,12 @@ class footer extends Component {
       <div className="footer">
         <div className="footer_header">
           <h1>Gaurav Jayasawal</h1>
-          <h3>jgaurav6@gmail.com</h3>
+          <h3>
+            <a href="mailto:jgaurav6@gmail.com">jgaurav6@gmail.com</a>
+          </h3>
           <h4>
-            I am a web and software developer looking to get hired in May 2019.
-            Leave me an email if you want me in your development team.
+            I am a full stack developer looking to get hired in May 2019. Leave
+            me an email if you want me in your development team.
           </h4>
         </div>
         <div className="footer_row2">

@@ -15,7 +15,7 @@ class App extends Component {
       .then(res => res.json())
       .then(
         result => {
-          this.props.addIp({ ip: result, time: time });
+          // this.props.addIp({ ip: result, time: time });
         },
         error => {
           console.log("error ip");

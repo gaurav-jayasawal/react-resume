@@ -11,6 +11,9 @@
 
 .footer_header > h3 {
   text-align: center;
+}
+
+.footer_header > h3 > a {
   color: var(--light-blue);
 }
 

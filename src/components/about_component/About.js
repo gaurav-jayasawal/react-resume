@@ -34,10 +34,14 @@ class About extends Component {
             </div>
             <div className="about-contents_col1--description">
               <h3>
-                Hi, I am the vice president of Coding Hub, Plattsburgh. I have a
-                passion for mobile and web development. I also love to working
-                with databases, making me enjoy data science and database
-                administration.
+                Hi, I am the vice president of{" "}
+                <a href="https://coding-hub.com" target="_blank">
+                  Coding Hub,
+                </a>{" "}
+                Plattsburgh. I am a fullstack web and android developer looking
+                to get hired in May 2019. Send me an email at{" "}
+                <a href="mailto:jgaurav6@gmail.com">jgaurav6@gmail.com</a> to
+                talk.
               </h3>
             </div>
             <div className="about-contents-col1--button">
