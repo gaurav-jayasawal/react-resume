@@ -8,6 +8,7 @@ import { goToAnchor } from "react-scrollable-anchor";
 class Home extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       overlay_style: {
         height: "100%",
@@ -16,20 +17,23 @@ class Home extends Component {
         top: "0",
         left: "0",
         transform: "translate(0,-100%)",
+        visibility: "invisible",
         transition: "transform 0.6s",
         position: "absolute",
         display: "block"
       },
       burgerStyle: {
         display: "block"
-      }
+      },
+      height: "100%"
     };
   }
   testHere = e => {
+    let newHieght = this.state.height;
     e.preventDefault();
     this.setState({
       overlay_style: {
-        height: "100vh",
+        height: { newHieght },
         width: "100%",
         background: "rgb(126,126,126,0.96)",
         top: "0",
@@ -45,34 +49,13 @@ class Home extends Component {
     });
   };
 
-  clickOnOverlay = e => {
-    e.preventDefault();
-    this.setState({
-      overlay_style: {
-        height: "100vh",
-        width: "100%",
-        background: "rgb(126,126,126,0.94)",
-        top: "0",
-        left: "0",
-        transform: "translate(0,-100%)",
-        transition: "transform 0.6s",
-        position: "absolute",
-        display: "block"
-      },
-      burgerStyle: {
-        visibility: "visible",
-        transition: "visibility 0.7s"
-      }
-    });
-  };
-
   handleClick(param, e) {
     e.preventDefault();
     console.log(param);
     goToAnchor(param);
     this.setState({
       overlay_style: {
-        height: "100vh",
+        height: "100%",
         width: "100%",
         background: "rgb(126,126,126,0.94)",
         top: "0",
@@ -114,6 +97,10 @@ class Home extends Component {
 
   componentDidMount() {
     document.addEventListener("mousedown", this.handleClickOut);
+    // let { clientHeight, clientWidth } = this.refs["home"];
+    // this.setState({ height: clientHeight });
+    // console.log(clientHeight * 2, clientWidth);
+    // console.log(this.state.height);
   }
 
   componentWillUnmount() {
@@ -122,7 +109,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="home">
+      <div ref="home" className="home">
         <div className="home-flex1">
           <div
             className="home-overlay_bar"
