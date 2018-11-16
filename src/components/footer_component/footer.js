@@ -30,10 +30,22 @@ class footer extends Component {
           </div>
           <div className="footer_row2-social">
             <div className="footer_row2-social--container">
-              <FooterSocialButton href="/" class="far fa-envelope" />
-              <FooterSocialButton href="/" class="fab fa-linkedin-in" />
-              <FooterSocialButton href="/" class="fab fa-instagram" />
-              <FooterSocialButton href="/" class="fab fa-github" />
+              <FooterSocialButton
+                href="mailto:jgaurav6@gmail.com"
+                class="far fa-envelope"
+              />
+              <FooterSocialButton
+                href="https://www.linkedin.com/in/gauravjj/"
+                class="fab fa-linkedin-in"
+              />
+              <FooterSocialButton
+                href="https://www.instagram.com/gauravjj/"
+                class="fab fa-instagram"
+              />
+              <FooterSocialButton
+                href="https://github.com/jgaurav6"
+                class="fab fa-github"
+              />
             </div>
           </div>
         </div>
