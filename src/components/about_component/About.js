@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./About.css";
-import MyImage from "../../main_assets/MyImage.svg";
+import MyImage from "../../main_assets/newImage.svg";
 import RatingBar from "./RatingBar/RatingBar";
 import Button1 from "../general_components/Button_Type_1/Button1";
 // import ScrollableAnchor from "react-scrollable-anchor";
