@@ -8,6 +8,7 @@ import ScrollableAnchor from "react-scrollable-anchor";
 import { connect } from "react-redux";
 import { addIp } from "./store/actions/ipActions";
 
+//Commit for the day
 class App extends Component {
   componentDidMount() {
     const time = new Date();
