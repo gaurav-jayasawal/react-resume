@@ -1,5 +1,5 @@
 .about {
-  height: 100vh;
+  min-height: 100vh;
   /* box-sizing: border-box; */
   padding: 50px 250px;
 }
