@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./components/home_component/Home";
 import About from "./components/about_component/About";
 import Project from "./components/projects_component/Projects";
+import Experience from "./components/experience_component/Experience";
 import Footer from "./components/footer_component/footer";
 import ScrollableAnchor from "react-scrollable-anchor";
 import { connect } from "react-redux";
@@ -39,6 +40,9 @@ class App extends Component {
         </ScrollableAnchor>
         <ScrollableAnchor id={"projects"}>
           <Project />
+        </ScrollableAnchor>
+        <ScrollableAnchor id={"experience"}>
+          <Experience />
         </ScrollableAnchor>
         <Footer />
       </div>
