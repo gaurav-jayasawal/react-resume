@@ -20,7 +20,7 @@ class Project extends Component {
           id: "chweb",
           source: require("../../main_assets/screens/screenshot2.png"),
           title: "Coding Hub Website",
-          fontColor: "#75F4F4",
+          fontColor: "#E2E2E2",
           color: "rgb(255,94,111,0.85)",
           technologies: ["React", "CSS", "HTML5", "Javascript", "Firebase"]
         },
