@@ -10,6 +10,7 @@
 .projectCard_row-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
 }
 
 .projectCard_row-1_col2 {
@@ -36,6 +37,7 @@
   font-weight: 600;
   color: #535050;
   font-size: 18px;
+  text-align: right;
 }
 
 .row-1_bottom-divider > hr {
@@ -80,7 +82,8 @@
   .projectCard_row-3 {
     margin-top: 30px;
   }
-  .projectCard_row-2_ul {
+  .projectCard_row-2_ul,
+  .projectCard_row-3 {
     font-size: 16px;
   }
   .row-1_col1--company-name {
@@ -97,7 +100,8 @@
   .row-1_bottom-divider {
     padding: 0px 40px;
   }
-  .projectCard_row-2_ul {
+  .projectCard_row-2_ul,
+  .projectCard_row-3 {
     font-size: 14px;
   }
   .row-1_col1--company-name {
@@ -123,4 +127,55 @@
 }
 
 @media (max-width: 600px) {
+  .projectCard_row-2_ul,
+  .projectCard_row-3 {
+    font-size: 12px;
+  }
+  .row-1_col1--company-name {
+    font-size: 14px;
+  }
+  .projectCard_row-1_col2 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .projectCard_row-1,
+  .projectCard_row-2,
+  .row-1_bottom-divider {
+    padding: 0px 20px;
+  }
+
+  .projectCard_row-2_ul,
+  .projectCard_row-3 {
+    font-size: 11px;
+  }
+  .row-1_col1--company-name {
+    font-size: 12.5px;
+  }
+  .projectCard_row-1_col2 {
+    font-size: 11px;
+  }
+  .projectCard_row-2 > ul {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .row-1_col1--logo > img {
+    width: 30px;
+  }
+  .projectCard_row-1_col1 {
+    grid-template-columns: 45px auto;
+  }
+  .projectCard_row-2_ul,
+  .projectCard_row-3 {
+    font-size: 10px;
+  }
+  .row-1_col1--company-name {
+    font-size: 11px;
+  }
+  .projectCard_row-1_col2 {
+    font-size: 10px;
+  }
 }
