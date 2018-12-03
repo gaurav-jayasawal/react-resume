@@ -107,3 +107,20 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 750px) {
+  .projectCard_row-1,
+  .projectCard_row-2,
+  .row-1_bottom-divider {
+    padding: 0px 30px;
+  }
+  .projectCard_row-1_col1 {
+    grid-template-columns: 70px auto;
+  }
+  .row-1_col1--logo > img {
+    width: 45px;
+  }
+}
+
+@media (max-width: 600px) {
+}
