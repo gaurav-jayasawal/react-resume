@@ -35,7 +35,11 @@ class About extends Component {
             <div className="about-contents_col1--description">
               <h3>
                 Hi, I am the vice president of{" "}
-                <a href="https://coding-hub.com" target="_blank">
+                <a
+                  href="https://coding-hub.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   Coding Hub,
                 </a>{" "}
                 Plattsburgh. I am a fullstack web and android developer looking

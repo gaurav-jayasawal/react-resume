@@ -6,7 +6,7 @@ const projectCard = props => (
     <div className="projectCard_row-1">
       <div className="projectCard_row-1_col1">
         <div className="row-1_col1--logo">
-          <img src={props.details.logo} width="60px" alt="Picture" />
+          <img src={props.details.logo} width="60px" alt="" />
         </div>
         <div className="row-1_col1--company-name">
           {props.details.company_name}
@@ -20,7 +20,7 @@ const projectCard = props => (
     <div className="projectCard_row-2">
       <ul className="projectCard_row-2_ul">
         {props.details.duties.map(duty => (
-          <li>{duty}</li>
+          <li key={duty}>{duty}</li>
         ))}
       </ul>
     </div>

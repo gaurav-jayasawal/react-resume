@@ -8,8 +8,7 @@ const FooterSocialButton = props => {
         href={props.href}
         className="footerSocialButtonLink"
         target="_blank"
-        rel="noopener
-        noreferrer"
+        rel="noopener noreferrer"
       >
         <i id="icon" className={props.class} />
       </a>

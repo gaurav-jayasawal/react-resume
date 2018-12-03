@@ -9,3 +9,21 @@
   margin-bottom: 50px;
   letter-spacing: 5px;
 }
+
+@media (max-width: 1750px) {
+  .experience {
+    padding: 50px 200px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .experience {
+    padding: 50px 150px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .experience {
+    padding: 50px 100px;
+  }
+}

@@ -44,7 +44,7 @@ class Experience extends Component {
         </div>
         <div className="project-card-list">
           {this.state.experiences.map(experience => (
-            <ProjectCard details={experience} />
+            <ProjectCard details={experience} key={experience.company_name} />
           ))}
         </div>
       </div>
