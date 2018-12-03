@@ -3,6 +3,20 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import "./experience.css";
 
 class Experience extends Component {
+  
+  constructor(props) {
+    this.state = {
+      experiences: [
+          {
+            logo: "",
+            company_name: "",
+            title: "",
+            
+          }
+      ]
+    }
+  }
+
   render() {
     return (
       <div className="experience">
