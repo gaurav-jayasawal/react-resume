@@ -9,7 +9,13 @@ const projectCard = props => (
           <img src={props.details.logo} width="60px" alt="" />
         </div>
         <div className="row-1_col1--company-name">
-          {props.details.company_name}
+          <a
+            href={props.details.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {props.details.company_name}
+          </a>
         </div>
       </div>
       <div className="projectCard_row-1_col2">{props.details.title}</div>
@@ -25,7 +31,7 @@ const projectCard = props => (
       </ul>
     </div>
     <div className="projectCard_row-3">
-      {props.details.date} | {props.details.location}
+      <strong>{props.details.date}</strong> | {props.details.location}
     </div>
   </div>
 );
