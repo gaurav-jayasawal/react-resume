@@ -3,7 +3,7 @@ import "./ResumeButton.css";
 
 const ResumeButton = (props) => {
     return(
-        <a href="www.google.com">
+        <a href={props.link} target="_blank">
             <div className="ResumeButton-component">
                 <div className="ResumeButton-component--text">
                     {props.value}

@@ -3,6 +3,7 @@ import "./NewAbout.css";
 import AboutImage from "../../main_assets/about_image.png";
 import ResumeButton from "./ResumeButton/ResumeButton";
 import TechnologyButton from "./TechnologyButton/TechnologyButton";
+import MyResume from "../../main_assets/resume.pdf";
 
 class NewAbout extends Component {
 
@@ -27,7 +28,7 @@ class NewAbout extends Component {
                             <img src={AboutImage} width="100%" alt=""/>
                         </div>
                         <div className="NewAbout-component--content__left-button">
-                            <ResumeButton value="RESUME" icon="fas fa-arrow-right"/>
+                            <ResumeButton value="RESUME" icon="fas fa-arrow-right" link={MyResume}/>
                         </div>
                     </div>
                     <div className="NewAbout-component--contents__right">
@@ -43,7 +44,7 @@ class NewAbout extends Component {
                             {this.state.technologies.map(tech => <TechnologyButton name={tech}/>)}
                         </div>                    
                         <div className="NewAbout-component--contents__right-projects_button">
-                            <ResumeButton value="PROJECTS ON GITHUB" icon="fab fa-github"/>
+                            <ResumeButton value="PROJECTS ON GITHUB" icon="fab fa-github" link="https://github.com/jgaurav6?tab=repositories"/>
                         </div>                    
                     </div>
                 </div>

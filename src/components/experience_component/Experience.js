@@ -8,6 +8,15 @@ class Experience extends Component {
     this.state = {
       experiences: [
         {
+          logo: require("../../main_assets/experience_logos/appian.png"),
+          company_name: "Appian Corporation",
+          title: "Incoming Software Engineer",
+          link: "https://appian.com",
+          duties:[],
+          date: "Jun/July 2019",
+          location: "Tysons, VA"
+        },
+        {
           logo: require("../../main_assets/experience_logos/coding_hub.png"),
           company_name: "Coding Hub",
           title: "Co-founder and Vice President",
